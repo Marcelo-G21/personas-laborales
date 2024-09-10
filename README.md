@@ -94,7 +94,15 @@ Para configurar el proyecto en tu máquina local, sigue estos pasos:
    PORT=3000
    ```
 
-4. **Ejecuta las migraciones (si es necesario):**
+4. **Ejecuta tu servidor de Redis**
+
+  Puedes ejecutar una imagen de Redis con Docker y en su consola ejecuta el siguiente comando:
+
+   ```bash
+   redis-cli -h 127.0.0.1 -p 6379
+   ```
+
+5. **Ejecuta las migraciones (si es necesario):**
 
    ```bash
    yarn sequelize-cle bd:migrate
@@ -106,7 +114,7 @@ Para configurar el proyecto en tu máquina local, sigue estos pasos:
    yarn sequelize-cli db:migrate:undo
    ```
 
-5. **Ejecuta seeders**
+6. **Ejecuta seeders**
 
    ```bash
    yarn sequelize-cli db:seed:all
@@ -118,7 +126,7 @@ Para configurar el proyecto en tu máquina local, sigue estos pasos:
    yarn sequelize-cli db:seed:undo
    ```
 
-6. **Inicia el servidor:**
+7. **Inicia el servidor:**
 
    ```bash
    yarn dev
